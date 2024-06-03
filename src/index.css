@@ -41,7 +41,27 @@
     font-family: sans-serif;
     margin: 1.5rem 0;
   }
-
+  .post-content ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+  }
+  .post-content ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+  }
+  .post-content li {
+    display: list-item;
+  }
   .dark .post-content h2 *,
   .dark .ql-editor h2 * {
     color: white;
