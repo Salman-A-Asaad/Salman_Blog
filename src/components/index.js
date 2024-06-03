@@ -1,0 +1,14 @@
+export { default as Header } from "./Header";
+export { default as FooterComponent } from "./FooterComponent";
+export { default as DashSidebar } from "./dashComponents/DashSidebar";
+export { default as DashProfile } from "./dashComponents/DashProfile";
+export { default as PrivateRoute } from "./utilsComponent/PrivateRoute";
+export { default as OnlyAdminPrivateRoute } from "./utilsComponent/OnlyAdminPrivateRoute";
+export { default as DashPosts } from "./dashComponents/DashPosts";
+export { default as DashUsers } from "./dashComponents/DashUsers";
+export { default as ScrollToTop } from "./utilsComponent/ScrollToTop";
+export { default as Comment } from "./commentComponent/Comment";
+export { default as CommentSection } from "./commentComponent/CommentSection";
+export { default as DashComments } from "./dashComponents/DashComments";
+export { default as PostCard } from "./PostCard";
+export { default as DashboardComp } from "./dashComponents/DashboardComp";

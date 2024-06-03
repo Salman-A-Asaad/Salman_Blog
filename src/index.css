@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  img {
+    object-fit: cover;
+    background-color: gray; /* Corrected from 'background-image: gray' */
+    background-image: url(/assets/img/loader.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .ql-editor {
+    font-size: 1.05rem;
+  }
+  .ql-editor.ql-blank::before {
+    color: #aaa;
+  }
+  .post-content p {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-content h1,
+  .dark .post-content h1,
+  .ql-editor h1,
+  .dark .ql-editor h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin: 1.5rem 0;
+  }
+  .dark .post-content h1 *,
+  .dark .ql-editor h1 * {
+    color: white;
+  }
+
+  .post-content h2,
+  .dark .post-content h2,
+  .ql-editort h2,
+  .dark .ql-editor h2 {
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    margin: 1.5rem 0;
+  }
+
+  .dark .post-content h2 *,
+  .dark .ql-editor h2 * {
+    color: white;
+  }
+  .post-content h3,
+  .dark .post-content h3,
+  .ql-editor h3,
+  .dark .ql-editor h3 {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    margin: 1.5rem 0;
+  }
+  .dark .post-content h3 *,
+  .dark .ql-editor h3 * {
+    color: white !important;
+  }
+  .post-content a:hover {
+    text-decoration: underline;
+  }
+  .dark .post-content p,
+  .dark .ql-editor p {
+    color: white !important;
+  }
+  .dark .post-content p span,
+  .dark .ql-editor p span {
+    color: white !important;
+  }
+  .dark .post-content a,
+  .post-content a {
+    color: hsl(163, 56%, 35%);
+    text-decoration: none;
+  }
+  .post-content ul li {
+    list-style: disc;
+    margin-left: 35px;
+  }
+  input {
+    border-color: hsl(163, 56%, 35%) !important;
+  }
+  input:focus {
+    outline: none !important;
+    border-color: hsl(163, 100%, 40%) !important;
+    box-shadow: none !important;
+  }
+  button {
+    border-color: hsl(163, 56%, 35%) !important;
+    width: fit-content !important;
+  }
+
+  button:focus {
+    outline: none;
+    border-color: hsl(163, 100%, 40%) !important;
+    box-shadow: none;
+    --tw-ring-shadow: hsl(163, 100%, 40%) !important;
+  }
+  button:hover {
+    background-color: white !important;
+    color: hsl(163, 56%, 35%);
+  }
+  select {
+    border-color: hsl(163, 56%, 35%);
+  }
+  select:focus {
+    border-color: hsl(163, 56%, 35%) !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .header button:hover {
+    background-color: none !important;
+  }
+}
+
+@layer utilities {
+  .main-color {
+    color: hsl(163, 56%, 35%);
+  }
+  .main-color-alt {
+    color: hsl(163, 100%, 40%);
+  }
+  .main-color-bg {
+    background-color: hsl(163, 56%, 35%);
+  }
+  .main-color-border {
+    border-color: hsl(163, 56%, 35%);
+  }
+}
+/* hsl(163, 100%, 40%) */
