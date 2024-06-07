@@ -2,7 +2,7 @@ import { Button, Label, Spinner, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { signInSuccess, signInFailure } from "../redux/user/userSlice";
+import { signInSuccess } from "../redux/user/userSlice";
 import { useSignIn } from "../api/query";
 import toast from "react-hot-toast";
 import { emailRegex, passwordRegex } from "../utils/regex";
@@ -18,11 +18,10 @@ const Signip = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.email || !formData.password)
-      return dispatch(signInFailure("Please fill out all fileds!"));
+      return toast.error("Please fill out all fileds!");
     if (!emailRegex.test(formData.email)) {
       return toast.error("Please enter a valid email address.");
     }
-
     if (!passwordRegex.test(formData.password)) {
       return toast.error(
         "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character."
@@ -46,7 +45,7 @@ const Signip = () => {
         }
       );
     } catch (err) {
-      dispatch(signInFailure(err.message));
+      console.log(err.message);
     }
   };
   return (
